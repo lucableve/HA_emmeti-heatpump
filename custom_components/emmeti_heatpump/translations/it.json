@@ -1,0 +1,40 @@
+{
+  "config": {
+    "title": "Pompa di Calore Emmeti",
+    "step": {
+      "user": {
+        "title": "Configurazione del Componente Pompa di Calore Emmeti",
+        "description": "Inserisci le tue credenziali Emmeti.",
+        "data": {
+          "username": "Nome utente",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossibile connettersi, verifica le impostazioni.",
+      "invalid_auth": "Nome utente o password non validi."
+    },
+    "abort": {
+      "already_configured": "Questo componente è già configurato."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opzioni per la Pompa di Calore Emmeti",
+        "description": "Configura le opzioni per il componente Pompa di Calore Emmeti."
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "emmeti_heatpump_time": {
+        "name": "Ora della Pompa di Calore Emmeti",
+        "state": {
+          "time": "Ora attuale"
+        }
+      }
+    }
+  }
+}

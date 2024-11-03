@@ -1,0 +1,12 @@
+{
+  "domain": "emmeti_heatpump",
+  "name": "Emmeti Heatpump",
+  "version": "1.0.0",
+  "documentation": "https://git.cloud-vps.ovh/Home-Assistant/emmeti-heatpump.git",
+  "dependencies": [],
+  "codeowners": ["@tuo_username"],
+  "requirements": [],
+  "iot_class": "cloud_polling",
+  "integration_type": "hub",
+  "config_flow": true
+}

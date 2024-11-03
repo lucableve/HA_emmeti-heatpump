@@ -1,0 +1,40 @@
+{
+  "config": {
+    "title": "Emmeti Heat Pump",
+    "step": {
+      "user": {
+        "title": "Setup Emmeti Heat Pump Component",
+        "description": "Enter your Emmeti credentials.",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect, please check the settings.",
+      "invalid_auth": "Invalid username or password."
+    },
+    "abort": {
+      "already_configured": "This component is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options for Emmeti Heat Pump",
+        "description": "Configure options for the Emmeti Heat Pump component."
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "emmeti_heatpump_time": {
+        "name": "Emmeti Heat Pump Time",
+        "state": {
+          "time": "Current Time"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "config": {
+        "title": "Pompa di calore Emmeti",
+        "step": {
+            "user": {
+                "title": "Configura la Pompa di calore Emmeti",
+                "data": {
+                    "username": "Nome utente",
+                    "password": "Password",
+                    "polling_interval": "Intervallo di polling (secondi)"
+                }
+            }
+        }
+    }
+}

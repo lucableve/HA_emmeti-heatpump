@@ -1,0 +1,11 @@
+{
+  "domain": "emmetiHP",
+  "name": "Emmeti aq-iot",
+  "after_dependencies": ["http"],
+  "documentation": "https://github.com/lucableve/HA_emmeti-heatpump",
+  "iot_class": "cloud_polling",
+  "integration_type": "hub",
+  "codeowners": ["@luca_bleve"],
+  "requirements": [],
+  "config_flow": true
+}

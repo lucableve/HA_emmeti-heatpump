@@ -1,0 +1,15 @@
+{
+    "config": {
+        "title": "Emmeti Heatpump",
+        "step": {
+            "user": {
+                "title": "Configure Emmeti Heatpump",
+                "data": {
+                    "username": "Username",
+                    "password": "Password",
+                    "polling_interval": "Polling Interval (seconds)"
+                }
+            }
+        }
+    }
+}

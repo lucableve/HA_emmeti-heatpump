@@ -1,5 +1,5 @@
 {
-  "domain": "emmetiHP",
+  "domain": "emmeti_hp",
   "name": "Emmeti aq-iot",
   "after_dependencies": ["http"],
   "documentation": "https://github.com/lucableve/HA_emmeti-heatpump",

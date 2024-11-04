@@ -1,34 +1,33 @@
-"""The Emmeti Heatpump integration."""
-
+import logging
+from datetime import timedelta
+import voluptuous as vol
 from homeassistant import config_entries
-from homeassistant.core import HomeAssistant
-from homeassistant.helpers import discovery
+from homeassistant.const import CONF_NAME, CONF_USERNAME, CONF_PASSWORD
 
 DOMAIN = "emmetiHP"
+_LOGGER = logging.getLogger(__name__)
 
-async def async_setup(hass: HomeAssistant, config: dict):
-    """Set up the Emmeti Heatpump component."""
-    hass.data[DOMAIN] = {}
+CONFIG_SCHEMA = vol.Schema({
+    DOMAIN: vol.Schema({
+        vol.Required(CONF_USERNAME): str,
+        vol.Required(CONF_PASSWORD): str,
+        vol.Optional(CONF_NAME): str,
+    })
+}, extra=vol.ALLOW_EXTRA)
 
-    # Registrare i componenti qui, ad esempio i sensori
-    await discovery.async_load_platform(hass, "sensor", DOMAIN, {}, config)
-
-    return True
-
-async def async_setup_entry(hass: HomeAssistant, entry: config_entries.ConfigEntry):
-    """Set up Emmeti Heatpump from a config entry."""
-    hass.data[DOMAIN][entry.entry_id] = entry.data
-
-    # Configurare i sensori e altre entità qui
-    await discovery.async_load_platform(hass, "sensor", DOMAIN, {}, entry)
+async def async_setup(hass, config):
+    if DOMAIN not in config:
+        return True
 
     return True
 
-async def async_unload_entry(hass: HomeAssistant, entry: config_entries.ConfigEntry):
-    """Unload a config entry."""
-    unload_ok = await discovery.async_unload_platform(hass, "sensor", entry)
+async def async_setup_entry(hass, entry):
+    """Set up Emmeti HP from a config entry."""
+    _LOGGER.debug("Setting up Emmeti HP...")
+    # Logica di configurazione qui
+    return True
 
-    # Rimuovere l'entry dai dati dell'integrazione
-    hass.data[DOMAIN].pop(entry.entry_id)
-
-    return unload_ok
+async def async_unload_entry(hass, entry):
+    """Unload an entry."""
+    _LOGGER.debug("Unloading Emmeti HP...")
+    return True
